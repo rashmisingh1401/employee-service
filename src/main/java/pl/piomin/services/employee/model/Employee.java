@@ -8,17 +8,27 @@ public class Employee {
 	private String name;
 	private int age;
 	private String position;
+	private String month;
 
 	public Employee() {
 
 	}
 	
-	public Employee(Long organizationId, Long departmentId, String name, int age, String position) {
+	public Employee(Long organizationId, Long departmentId, String name, int age, String position, String month) {
 		this.organizationId = organizationId;
 		this.departmentId = departmentId;
 		this.name = name;
 		this.age = age;
 		this.position = position;
+		this.month = month;
+	}
+
+	public String getMonth() {
+		return month;
+	}
+
+	public void setMonth(String month) {
+		this.month = month;
 	}
 
 	public Long getId() {
@@ -72,7 +82,7 @@ public class Employee {
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", organizationId=" + organizationId + ", departmentId=" + departmentId
-				+ ", name=" + name + ", position=" + position + "]";
+				+ ", name=" + name + ", position=" + position + ", month=" + month + "]";
 	}
 
 }

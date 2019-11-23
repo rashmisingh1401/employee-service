@@ -36,5 +36,8 @@ public class EmployeeRepository {
 	public List<Employee> findByOrganization(Long organizationId) {
 		return employees.stream().filter(a -> a.getOrganizationId().equals(organizationId)).collect(Collectors.toList());
 	}
+	public List<Employee> findByMonth(String month) {
+		return employees.stream().filter(a -> a.getMonth().equals(month)).collect(Collectors.toList());
+	}
 	
 }

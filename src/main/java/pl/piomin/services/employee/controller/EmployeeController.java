@@ -45,6 +45,11 @@ public class EmployeeController {
 		LOGGER.info("Employee find: departmentId={}", departmentId);
 		return repository.findByDepartment(departmentId);
 	}
+	@GetMapping("/month/{month}")
+	public List<Employee> findByMonth(@PathVariable("month") String month) {
+		LOGGER.info("Employee find: month={}", month);
+		return repository.findByMonth(month);
+	}
 	
 	@GetMapping("/organization/{organizationId}")
 	public List<Employee> findByOrganization(@PathVariable("organizationId") Long organizationId) {
