@@ -34,7 +34,7 @@ public class EmployeeController {
 		return repository.findById(id);
 	}
 	@GetMapping("/{eventName}")
-	public Employee findByEventName(@PathVariable("eventName") String eventName) {
+	public List<Employee> findByEventName(@PathVariable("eventName") String eventName) {
 		LOGGER.info("Employee find: eventName={}", eventName);
 		return repository.findByEventName(eventName);
 	}
